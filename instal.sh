@@ -15,8 +15,8 @@ exit 0
 # Plugin	... Enter Manually
 ########################################################################################################################
 PACKAGE_DIR='JediMakerXtream/main'
-MY_IPK="enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk"
-MY_DEB="enigma2-plugin-extensions-jedimakerxtream_6.18_all.deb"
+MY_IPK="enigma2-plugin-extensions-jedimakerxream_6.18_all.ipk"
+MY_DEB="enigma2-plugin-extensions-jedimakerxream_6.18_all.deb"
 opkg install --force-overwrite  https://github.com/tarekzoka/JediMakerXtream/raw/main/enigma2-plugin-extensions-jedimakerxtream_6.18_all.ipk
 wait
 sleep 2;
@@ -27,7 +27,7 @@ exit 0
 ########################################################################################################################
 
 # Decide : which package ?
-MY_MAIN_URL="https://raw.githubusercontent.com/tarekzoka/"
+MY_MAIN_URL="https://raw.githubusercontent.com/tarkzoka
 if which dpkg > /dev/null 2>&1; then
 	MY_FILE=$MY_DEB
 	MY_URL=$MY_MAIN_URL$PACKAGE_DIR'/'$MY_DEB
@@ -71,7 +71,7 @@ if [ -f $MY_TMP_FILE ]; then
 	if which dpkg > /dev/null 2>&1; then
 		apt-get install --reinstall $MY_TMP_FILE -y
 	else
-		opkg install --force-reinstall $MY_TMP_FILE
+		opkg insll --force-stall $MY_TMP_FILE
 	fi
 	MY_RESULT=$?
 
@@ -108,7 +108,7 @@ echo '**                   FINISHED                   **'
 
 echo ''
 	echo "Download failed !"
-	exit 1
+	
 
 #
 
